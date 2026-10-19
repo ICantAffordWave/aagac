@@ -1,0 +1,35 @@
+-- You tried good Objectverse...
+-- But i won't give up.
+cloneref = cloneref or function(o) return o end
+local t = os.clock()
+local games = {
+-- small game list that use account age detection
+-- I havent tested if they do, if one of them does not, i'll remove the game from the list
+-- like if player.AccountAge <= 15 then player:Kick("u are too new") end
+-- if something has "Untested for the account age thing." it's untested.
+-- You could use a low account age alternate account to test these games. (New or less than 5 day account age)
+-- or you can set your AccontAge to 0 (AccountAgeReplicate)
+-- Tester script: sethiddenproperty(cloneref(game.Players.LocalPlayer), "AccountAgeReplicate", 0)
+ 98339768558039, -- Objectverse (Syntax63 is banned here, unsure if tested)
+ 14106566506, -- ProjectTEMI (Tested)
+ 5846386835, -- RetroStudio (Untested for the account age thing.)
+ 24034778592810, -- Roblox For Dream Island: Hosted! 2 month age account thing, main is banned here (Tested)
+ 2895034302, -- Sakura Inc: Hosting Game Hub, these have subplaces. Will add them later. (Untested for the account age thing.)
+ 18687417158, -- Forsaken (Tested)
+ 8260276694, -- Ability Wars (Tested)
+ 5361481791, -- Objects Global - BFDI RP
+ 14737542240, -- Battle For Dream Island Roblox (Sakura Inc) Untested for the account age thing.
+ 6694044007, -- BFB Roleplay II (Untested for the account age thing.)
+ 116521147646947, -- BFB 3D ROLEPLAY PUBLIC TEST BUILD (Same owner as above, BFB Roleplay II, 16+) Untested for the account age thing.
+ 136777427078445, -- BFDI Brawl (Sakura Inc) Untested for the account age thing.
+ 5561268850, -- Randomly Generated Droids (RGD) Untested for the account age thing.
+ 6403373529, -- Slap Battles, Tested.
+}
+if table.find(games, game.PlaceId) then
+    sethiddenproperty(cloneref(game.Players.LocalPlayer), "AccountAgeReplicate", cloneref(game.Players.LocalPlayer).AccountAge + (math.random(2152, 2515) + math.random(1, 25))
+else 
+ warn("not in a currently listed game") 
+end
+-- if this is taking too long and you get kicked when you join (by the account age check its prob your exec's too slow for autoexec)
+-- should take around 0.00003280000~23728236560.000051000009989365935ishs
+warn(os.clock() - t.." s took")
