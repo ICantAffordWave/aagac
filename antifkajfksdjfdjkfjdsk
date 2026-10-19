@@ -1,5 +1,7 @@
 -- You tried good Objectverse...
 -- But i won't give up.
+-- Uncomment below to test if they have any age shit.
+--sethiddenproperty(cloneref(game.Players.LocalPlayer), "AccountAgeReplicate", 0)
 cloneref = cloneref or function(o) return o end
 local t = os.clock()
 local games = {
@@ -26,7 +28,7 @@ local games = {
  6403373529, -- Slap Battles, Tested.
 }
 if table.find(games, game.PlaceId) then
-    sethiddenproperty(cloneref(game.Players.LocalPlayer), "AccountAgeReplicate", cloneref(game.Players.LocalPlayer).AccountAge + (math.random(2152, 2515) + math.random(1, 25))
+    sethiddenproperty(cloneref(game.Players.LocalPlayer), "AccountAgeReplicate", cloneref(game.Players.LocalPlayer).AccountAge + (math.random(2152, 2515) + math.random(1, 25)))
 else 
  warn("not in a currently listed game") 
 end
